@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Millennium Youth Empowerment Initiative (MYEI)</title>
+    <meta name="description" content="MYEI is a new community-based organisation in Kajiado using football to reach and support at-risk youth, with mentorship and peer-led skills training as our next phase of growth.">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        myei: {
+                            navy: '#1F2D50',
+                            navydeep: '#13192E',
+                            teal: '#3D8E83',
+                            amber: '#F2A71B',
+                            paper: '#FBF8F2',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Fraunces', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Fraunces', serif; }
+        a:focus-visible, button:focus-visible, input:focus-visible,
+        textarea:focus-visible, select:focus-visible {
+            outline: 3px solid #F2A71B;
+            outline-offset: 2px;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            * { transition: none !important; }
+        }
+    </style>
+</head>
+<body class="bg-myei-paper text-slate-800 leading-relaxed">
+
+    <!-- ===== Navigation ===== -->
+    <header class="sticky top-0 z-50 bg-myei-paper/90 backdrop-blur-md border-b border-myei-navy/10">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#top" class="flex items-center space-x-2">
+                <img src="assets/logo.png" alt="MYEI logo" class="h-10 w-auto">
+                <span class="font-display font-bold text-lg md:text-xl tracking-tight text-myei-navy">MYEI</span>
+            </a>
+            <nav class="hidden md:flex space-x-8 font-medium text-sm text-myei-navy">
+                <a href="#about"   class="hover:text-myei-teal transition">Who We Serve</a>
+                <a href="#model"   class="hover:text-myei-teal transition">How We Work</a>
+                <a href="#team"    class="hover:text-myei-teal transition">Our Team</a>
+                <a href="#programs"class="hover:text-myei-teal transition">Roadmap</a>
+                <a href="#contact" class="hover:text-myei-teal transition">Contact</a>
+            </nav>
+            <div class="flex items-center gap-2">
+                <a href="#contact" class="hidden sm:inline-block bg-myei-navy text-white px-5 py-2 rounded-full font-semibold text-sm hover:bg-myei-teal transition shadow-sm">
+                    Get Involved
+                </a>
+                <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" class="md:hidden p-2 text-myei-navy">
+                    <i class="fas fa-bars text-xl" id="nav-icon"></i>
+                </button>
+            </div>
+        </div>
+        <nav id="mobile-nav" class="md:hidden hidden flex-col bg-myei-paper border-t border-myei-navy/10 px-4 py-4 space-y-3 font-medium text-myei-navy">
+            <a href="#about"    class="block py-1">Who We Serve</a>
+            <a href="#model"    class="block py-1">How We Work</a>
+            <a href="#team"     class="block py-1">Our Team</a>
+            <a href="#programs" class="block py-1">Roadmap</a>
+            <a href="#contact"  class="block py-1 font-semibold text-myei-teal">Contact &amp; Get Involved</a>
+        </nav>
+    </header>
+
+    <!-- ===== Hero ===== -->
+    <section id="top" class="relative text-white py-20 md:py-32 px-4 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/photos/action-3.jpg');" aria-hidden="true"></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-myei-navydeep/95 via-myei-navy/90 to-black/80" aria-hidden="true"></div>
+        <div class="max-w-4xl mx-auto text-center space-y-6 relative z-10">
+            <span class="bg-myei-amber/20 text-myei-amber border border-myei-amber/30 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
+                Millennium Youth Empowerment Initiative
+            </span>
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
+                Transforming Lives Through Sports, Health &amp; Technical Skills
+            </h1>
+            <p class="text-base md:text-xl text-slate-300 max-w-2xl mx-auto font-light">
+                Amidst a tumultuous period of confusion for youth, MYEI uses football as a baseline for physical health, community connection, and vital mental and vocational empowerment.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
+                <a href="#model" class="bg-myei-amber text-white px-8 py-3 rounded-lg font-semibold hover:bg-amber-600 transition shadow-md text-center">
+                    See Our Approach
+                </a>
+                <a href="#contact" class="border border-myei-teal text-white px-8 py-3 rounded-lg font-semibold hover:bg-myei-teal/20 transition text-center">
+                    Partner With Us
+                </a>
+            </div>
+        </div>
+        <div class="absolute -bottom-16 -left-16 w-64 h-64 bg-myei-teal/10 rounded-full blur-3xl z-10"></div>
+    </section>
+
+    <!-- ===== Who We Serve ===== -->
+    <section id="about" class="py-16 md:py-20 bg-white px-4">
+        <div class="max-w-4xl mx-auto grid md:grid-cols-12 gap-8 md:gap-12 items-center">
+            <div class="md:col-span-7 space-y-4">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-myei-teal font-sans">Who we serve</h2>
+                <h3 class="text-2xl md:text-3xl font-bold text-myei-navy tracking-tight">Reaching youth who need a safe place to turn.</h3>
+                <p class="text-slate-600 text-sm md:text-base">
+                    Traditional programmes rely on classrooms, invitations, and forms — meaning
+                    the young people who need support most are the first to be left out. We meet
+                    youth right where they are: on the field. MYEI focuses on:
+                </p>
+                <ul class="space-y-3 text-sm text-slate-700">
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-circle text-myei-amber text-[6px] mt-2 flex-shrink-0"></i>
+                        <span>School dropouts and youth who can't return to school because of fees.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-circle text-myei-amber text-[6px] mt-2 flex-shrink-0"></i>
+                        <span>Young people without steady mentors, role models, or a safe peer group.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-circle text-myei-amber text-[6px] mt-2 flex-shrink-0"></i>
+                        <span>
+                            <span class="font-semibold text-myei-navy">Coming next —</span>
+                            a dedicated programme to safely reach and support girls in our community
+                            who are at risk of early marriage.
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="md:col-span-5 bg-myei-paper p-3 rounded-2xl border border-myei-navy/10 relative overflow-hidden shadow-sm">
+                <img src="assets/photos/team-1.jpg" alt="MYEI youth team lined up on the pitch" class="w-full h-48 md:h-64 object-cover object-center rounded-xl">
+                <div class="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm px-4 py-2 rounded-lg shadow-sm border border-slate-100">
+                    <div class="text-[11px] font-bold text-myei-teal uppercase tracking-wider font-sans">Founded 2025</div>
+                    <p class="text-[10px] text-slate-500 italic">Honest, local action from day one.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Honest Status Bar ===== -->
+    <section class="py-10 bg-myei-navydeep text-white px-4">
+        <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+            <div class="space-y-1 border-b sm:border-b-0 sm:border-r border-slate-800 pb-4 sm:pb-0">
+                <div class="text-lg font-bold text-myei-amber tracking-wide">ONGOING &amp; LIVE</div>
+                <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 font-sans">Football Operations</div>
+            </div>
+            <div class="space-y-1 border-b sm:border-b-0 sm:border-r border-slate-800 pb-4 sm:pb-0">
+                <div class="text-lg font-bold text-white tracking-wide">ESTABLISHED 2025</div>
+                <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 font-sans">CBO Registered</div>
+            </div>
+            <div class="space-y-1">
+                <div class="text-lg font-bold text-myei-teal tracking-wide">COMING SOON</div>
+                <div class="text-[11px] font-semibold uppercase tracking-wider text-slate-400 font-sans">First Skills Cohort</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== How We Work ===== -->
+    <section id="model" class="py-16 md:py-20 bg-myei-paper px-4">
+        <div class="max-w-5xl mx-auto space-y-12">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-myei-teal font-sans">How we work</h2>
+                <h3 class="text-2xl md:text-3xl font-bold text-myei-navy">One pitch, three things happening.</h3>
+                <p class="text-sm md:text-base text-slate-600">
+                    Football isn't a side activity — it's the structure everything else runs on.
+                    Each step builds on the trust and routine of the one before it.
+                </p>
+            </div>
+
+            <div class="max-w-2xl mx-auto overflow-hidden rounded-2xl shadow-md border border-slate-200">
+                <img src="assets/photos/huddle.jpg" alt="MYEI youth team in a huddle — the trust that makes everything else possible" class="w-full h-64 object-cover object-center">
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Step 1 — Active -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-myei-navy/5 space-y-4 hover:-translate-y-1 hover:shadow-md transition">
+                    <div class="flex justify-between items-center">
+                        <span class="font-display text-xs font-bold tracking-widest text-myei-amber">01</span>
+                        <span class="text-[9px] font-bold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full font-sans">Active now</span>
+                    </div>
+                    <div class="w-12 h-12 bg-myei-amber/10 rounded-xl flex items-center justify-center text-myei-amber text-xl">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-myei-navy">Football as the point of contact</h3>
+                    <p class="text-sm text-slate-600">
+                        Regular matches and training sessions give at-risk youth a reason to show up — consistently, for free, no questions asked. It builds trust, teamwork, and physical health.
+                    </p>
+                </div>
+                <!-- Step 2 — In progress -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-myei-navy/5 space-y-4 hover:-translate-y-1 hover:shadow-md transition">
+                    <div class="flex justify-between items-center">
+                        <span class="font-display text-xs font-bold tracking-widest text-myei-amber">02</span>
+                        <span class="text-[9px] font-bold uppercase tracking-wider text-myei-amber bg-myei-amber/10 px-2 py-0.5 rounded-full font-sans">Building now</span>
+                    </div>
+                    <div class="w-12 h-12 bg-myei-teal/10 rounded-xl flex items-center justify-center text-myei-teal text-xl">
+                        <i class="fas fa-heart-pulse"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-myei-navy">Mentorship, off the ball</h3>
+                    <p class="text-sm text-slate-600">
+                        After sessions, we use the trust already built to open conversations that matter — sexual and reproductive health, mental wellness, and navigating pressure as a young person.
+                    </p>
+                </div>
+                <!-- Step 3 — Planned -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-myei-navy/5 space-y-4 hover:-translate-y-1 hover:shadow-md transition">
+                    <div class="flex justify-between items-center">
+                        <span class="font-display text-xs font-bold tracking-widest text-myei-amber">03</span>
+                        <span class="text-[9px] font-bold uppercase tracking-wider text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full font-sans">Phase II</span>
+                    </div>
+                    <div class="w-12 h-12 bg-myei-navy/10 rounded-xl flex items-center justify-center text-myei-navy text-xl">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-myei-navy">Peer-to-peer skills training</h3>
+                    <p class="text-sm text-slate-600">
+                        Our planned next milestone: CBO members who already hold a trade skill lead short courses for their peers in things like electrical wiring, plumbing, and coding.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Gallery ===== -->
+    <section id="gallery" class="py-16 bg-white px-4">
+        <div class="max-w-6xl mx-auto space-y-8">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-myei-teal font-sans">On the pitch</h2>
+                <h3 class="text-2xl md:text-3xl font-bold text-myei-navy">Where it all starts.</h3>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+                <div class="col-span-2 rounded-2xl overflow-hidden">
+                    <img src="assets/photos/action-1.jpg" alt="MYEI player launching the ball during a match" class="w-full h-full object-cover aspect-square md:aspect-auto min-h-[200px]">
+                </div>
+                <div class="rounded-2xl overflow-hidden">
+                    <img src="assets/photos/action-2.jpg" alt="Players contesting possession during a MYEI match" class="w-full h-full object-cover aspect-square">
+                </div>
+                <div class="rounded-2xl overflow-hidden">
+                    <img src="assets/photos/action-3.jpg" alt="Close dribbling action on the MYEI pitch" class="w-full h-full object-cover aspect-square">
+                </div>
+                <div class="col-span-2 rounded-2xl overflow-hidden">
+                    <img src="assets/photos/huddle.jpg" alt="MYEI team huddle after a match" class="w-full h-full object-cover" style="min-height:180px; max-height:260px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Our Team ===== -->
+    <section id="team" class="py-16 bg-myei-paper px-4 border-t border-myei-navy/10">
+        <div class="max-w-4xl mx-auto space-y-10">
+            <div class="text-center max-w-2xl mx-auto space-y-2">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-myei-teal font-sans">Our team</h2>
+                <h3 class="text-2xl md:text-3xl font-bold text-myei-navy">Driven by grassroots leadership.</h3>
+                <p class="text-slate-600 text-sm">
+                    MYEI is community-built and volunteer-led. More team profiles coming soon.
+                </p>
+            </div>
+
+            <!-- Founder card -->
+            <div class="bg-white border border-myei-navy/10 rounded-3xl p-6 md:p-8 grid md:grid-cols-12 gap-8 items-center shadow-sm max-w-3xl mx-auto">
+                <div class="md:col-span-4 flex justify-center">
+                    <div class="w-40 h-40 rounded-2xl overflow-hidden border-2 border-myei-teal shadow-md">
+                        <img src="assets/photos/founder.jpg" alt="Crystal May, Executive Director & Founder of MYEI" class="w-full h-full object-cover object-top">
+                    </div>
+                </div>
+                <div class="md:col-span-8 space-y-4 text-center md:text-left">
+                    <div>
+                        <h4 class="text-2xl font-bold text-myei-navy">Crystal May</h4>
+                        <p class="text-sm font-semibold tracking-wide uppercase text-myei-teal font-sans mt-0.5">Executive Director &amp; Founder</p>
+                    </div>
+                    <p class="text-slate-600 text-sm">
+                        Building MYEI from the ground up — establishing safe spaces, practical
+                        skills pipelines, and peer mentorship for vulnerable young people in Kajiado.
+                    </p>
+                    <div class="bg-myei-paper border-l-4 border-myei-amber p-3.5 rounded-r-xl text-left">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-trophy text-myei-amber text-lg"></i>
+                            <div>
+                                <h5 class="text-xs font-bold uppercase tracking-wide text-myei-navy font-sans">Award recognition</h5>
+                                <p class="text-xs text-slate-600 mt-0.5">
+                                    Recipient of the <span class="text-myei-teal font-semibold">Women in Business Award</span> for excellence in grassroots community leadership.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Phase II Roadmap ===== -->
+    <section id="programs" class="py-16 md:py-24 bg-white px-4">
+        <div class="max-w-6xl mx-auto space-y-12">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-end gap-4">
+                <div class="space-y-2">
+                    <h2 class="text-xs font-bold uppercase tracking-widest text-myei-teal font-sans">Phase II — Our roadmap</h2>
+                    <h3 class="text-2xl md:text-3xl font-bold text-myei-navy tracking-tight">Our next frontier: peer-to-peer learning.</h3>
+                </div>
+                <p class="text-slate-600 text-sm max-w-md">
+                    We're organising curricula for CBO members who already hold trade skills to
+                    lead short, practical courses that make their peers directly employable.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="p-6 rounded-2xl bg-myei-paper border border-myei-navy/10 shadow-sm flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div class="text-myei-teal text-2xl"><i class="fas fa-bolt"></i></div>
+                            <span class="text-[9px] uppercase font-bold tracking-wider text-myei-amber bg-myei-amber/10 px-2 py-0.5 rounded font-sans">In development</span>
+                        </div>
+                        <h4 class="font-bold text-base text-myei-navy">Electrical wiring</h4>
+                        <p class="text-sm text-slate-600">Domestic circuits, safe structural layouts, and practical repair skills.</p>
+                    </div>
+                    <span class="text-[10px] uppercase font-bold tracking-wide text-slate-400 bg-slate-100 px-2.5 py-1 rounded mt-4 inline-block self-start font-sans">Vocational track</span>
+                </div>
+                <div class="p-6 rounded-2xl bg-myei-paper border border-myei-navy/10 shadow-sm flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div class="text-myei-teal text-2xl"><i class="fas fa-faucet"></i></div>
+                            <span class="text-[9px] uppercase font-bold tracking-wider text-myei-amber bg-myei-amber/10 px-2 py-0.5 rounded font-sans">In development</span>
+                        </div>
+                        <h4 class="font-bold text-base text-myei-navy">Plumbing</h4>
+                        <p class="text-sm text-slate-600">Pipe fitting, domestic fixtures, and basic repair trade skills.</p>
+                    </div>
+                    <span class="text-[10px] uppercase font-bold tracking-wide text-slate-400 bg-slate-100 px-2.5 py-1 rounded mt-4 inline-block self-start font-sans">Vocational track</span>
+                </div>
+                <div class="p-6 rounded-2xl bg-myei-paper border border-myei-navy/10 shadow-sm flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <div class="text-myei-teal text-2xl"><i class="fas fa-code"></i></div>
+                            <span class="text-[9px] uppercase font-bold tracking-wider text-myei-teal bg-myei-teal/10 px-2 py-0.5 rounded font-sans">In development</span>
+                        </div>
+                        <h4 class="font-bold text-base text-myei-navy">Coding</h4>
+                        <p class="text-sm text-slate-600">Foundational programming logic, basic web pages, and digital-economy skills.</p>
+                    </div>
+                    <span class="text-[10px] uppercase font-bold tracking-wide text-slate-400 bg-slate-100 px-2.5 py-1 rounded mt-4 inline-block self-start font-sans">Digital economy track</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="bg-myei-navydeep text-white py-16 md:py-20 px-4">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-5 space-y-6">
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Partner with MYEI</h2>
+                <p class="text-slate-300 text-sm">
+                    We welcome mentors, health organisations, and skill trainers to help us grow.
+                    Whether it's equipment, training space, or curriculum support for Phase II —
+                    we'd love to hear from you.
+                </p>
+                <div class="space-y-3 text-sm text-slate-300">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-envelope text-myei-amber w-4"></i>
+                        <span>myeiyouth@gmail.com</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-location-dot text-myei-amber w-4"></i>
+                        <span>Kajiado, Kenya</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-7 bg-myei-paper text-slate-800 p-6 md:p-8 rounded-2xl shadow-xl">
+                <form data-netlify="true" name="myei-contact" method="POST" class="space-y-4">
+                    <input type="hidden" name="form-name" value="myei-contact">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label for="name" class="block text-xs font-bold uppercase tracking-wide text-myei-navy/60 mb-1">Your name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-myei-navy/15 rounded-lg focus:outline-none focus:border-myei-teal text-sm bg-white">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-xs font-bold uppercase tracking-wide text-myei-navy/60 mb-1">Phone number</label>
+                            <input type="tel" id="phone" name="phone" required class="w-full px-3 py-2 border border-myei-navy/15 rounded-lg focus:outline-none focus:border-myei-teal text-sm bg-white">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="role" class="block text-xs font-bold uppercase tracking-wide text-myei-navy/60 mb-1">How would you like to get involved?</label>
+                        <select id="role" name="role" class="w-full px-3 py-2 border border-myei-navy/15 rounded-lg focus:outline-none focus:border-myei-teal text-sm text-slate-700 bg-white">
+                            <option>I want to join the football sessions</option>
+                            <option>I want to volunteer as a mentor or trainer</option>
+                            <option>I am an institutional partner, health advocate, or donor</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-xs font-bold uppercase tracking-wide text-myei-navy/60 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="3" required class="w-full px-3 py-2 border border-myei-navy/15 rounded-lg focus:outline-none focus:border-myei-teal text-sm bg-white"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-myei-amber text-myei-navydeep font-semibold py-3 rounded-lg hover:bg-amber-400 transition shadow-sm text-sm uppercase tracking-wider">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="bg-myei-navydeep border-t border-white/10 text-slate-400 text-xs">
+        <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-3">
+                <img src="assets/logo.png" alt="MYEI logo" class="h-8 w-auto opacity-90">
+                <span class="font-display text-white text-sm">Millennium Youth Empowerment Initiative</span>
+            </div>
+            <nav class="flex flex-wrap justify-center gap-6">
+                <a href="#about"    class="hover:text-myei-amber transition">Who We Serve</a>
+                <a href="#model"    class="hover:text-myei-amber transition">How We Work</a>
+                <a href="#team"     class="hover:text-myei-amber transition">Team</a>
+                <a href="#programs" class="hover:text-myei-amber transition">Roadmap</a>
+                <a href="#contact"  class="hover:text-myei-amber transition">Contact</a>
+            </nav>
+        </div>
+        <p class="text-center pb-6">&copy; <span id="year"></span> Millennium Youth Empowerment Initiative &middot; Kajiado, Kenya</p>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const mobileNav  = document.getElementById('mobile-nav');
+        const navIcon    = document.getElementById('nav-icon');
+
+        navToggle.addEventListener('click', () => {
+            const isHidden = mobileNav.classList.toggle('hidden');
+            mobileNav.classList.toggle('flex');
+            navToggle.setAttribute('aria-expanded', !isHidden);
+            navIcon.className = isHidden ? 'fas fa-bars text-xl' : 'fas fa-xmark text-xl';
+        });
+
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.add('hidden');
+                mobileNav.classList.remove('flex');
+                navToggle.setAttribute('aria-expanded', 'false');
+                navIcon.className = 'fas fa-bars text-xl';
+            });
+        });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

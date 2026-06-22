@@ -359,59 +359,103 @@
     </section>
 
     <!-- ===== Contact ===== -->
-    <section id="contact" class="bg-myei-navydeep text-white py-16 md:py-20 px-4">
-        <div class="max-w-5xl mx-auto grid md:grid-cols-12 gap-12 items-center">
-            <div class="md:col-span-5 space-y-6">
-                <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Partner with MYEI</h2>
-                <p class="text-slate-300 text-sm">
-                    We welcome mentors, health organisations, and skill trainers to help us grow.
-                    Whether it's equipment, training space, or curriculum support for Phase II —
-                    we'd love to hear from you.
-                </p>
-                <div class="space-y-3 text-sm text-slate-300">
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-envelope text-myei-amber w-4"></i>
-                        <span>myeiyouth@gmail.com</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <i class="fas fa-location-dot text-myei-amber w-4"></i>
-                        <span>Kajiado, Kenya</span>
-                    </div>
+    
+<section id="contact" class="bg-myei-navydeep text-white py-16 md:py-20 px-4">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-5 space-y-6">
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Partner with MYEI</h2>
+            <p class="text-slate-300 text-sm">
+                We welcome mentors, health organisations, and skill trainers to help us grow.
+                Whether it's equipment, training space, or curriculum support for Phase II —
+                we'd love to hear from you.
+            </p>
+            <div class="space-y-3 text-sm text-slate-300">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-envelope text-myei-amber w-4"></i>
+                    <span>myeiyouth@gmail.com</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-location-dot text-myei-amber w-4"></i>
+                    <span>Kajiado, Kenya</span>
                 </div>
             </div>
-
-            <div class="md:col-span-7 bg-myei-paper text-slate-800 p-6 md:p-8 rounded-2xl shadow-xl">
-               <form name="myei-contact" method="POST" data-netlify="true" action="/?success=true" class="space-y-4">
+        </div>
+        <div class="md:col-span-7 bg-myei-paper text-slate-800 p-6 md:p-8 rounded-2xl shadow-xl">
+            <form name="myei-contact" method="POST" data-netlify="true" class="space-y-4" onsubmit="return handleSubmit(event)">
                 <input type="hidden" name="form-name" value="myei-contact">
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label for="name" class="block text-xs font-bold uppercase tracking-wide text-myei-navy/60 mb-1">Your name</label>
-                            <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-myei-navy/15 rounded-lg focus:outline-none focus:border-myei-teal text-sm bg-white">
-                        </div>
-                        <div>
-                            <label for="phone" class="block text-xs font-bold uppercase tracking-wide text-myei-navy/60 mb-1">Phone number</label>
-                            <input type="tel" id="phone" name="phone" required class="w-full px-3 py-2 border border-myei-navy/15 rounded-lg focus:outline-none focus:border-myei-teal text-sm bg-white">
-                        </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label for="name" class="block text-xs font-bold uppercase tracking-wide text-myei-navy/60 mb-1">Your name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-3 py-2 border border-myei-navy/15 rounded-lg focus:outline-none focus:border-myei-teal text-sm bg-white">
                     </div>
                     <div>
-                        <label for="role" class="block text-xs font-bold uppercase tracking-wide text-myei-navy/60 mb-1">How would you like to get involved?</label>
-                        <select id="role" name="role" class="w-full px-3 py-2 border border-myei-navy/15 rounded-lg focus:outline-none focus:border-myei-teal text-sm text-slate-700 bg-white">
-                            <option>I want to join the football sessions</option>
-                            <option>I want to volunteer as a mentor or trainer</option>
-                            <option>I am an institutional partner, health advocate, or donor</option>
-                        </select>
+                        <label for="phone" class="block text-xs font-bold uppercase tracking-wide text-myei-navy/60 mb-1">Phone number</label>
+                        <input type="tel" id="phone" name="phone" required class="w-full px-3 py-2 border border-myei-navy/15 rounded-lg focus:outline-none focus:border-myei-teal text-sm bg-white">
                     </div>
-                    <div>
-                        <label for="message" class="block text-xs font-bold uppercase tracking-wide text-myei-navy/60 mb-1">Message</label>
-                        <textarea id="message" name="message" rows="3" required class="w-full px-3 py-2 border border-myei-navy/15 rounded-lg focus:outline-none focus:border-myei-teal text-sm bg-white"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-myei-amber text-myei-navydeep font-semibold py-3 rounded-lg hover:bg-amber-400 transition shadow-sm text-sm uppercase tracking-wider">
-                        Send Message
-                    </button>
-                </form>
+                </div>
+                <div>
+                    <label for="role" class="block text-xs font-bold uppercase tracking-wide text-myei-navy/60 mb-1">How would you like to get involved?</label>
+                    <select id="role" name="role" class="w-full px-3 py-2 border border-myei-navy/15 rounded-lg focus:outline-none focus:border-myei-teal text-sm text-slate-700 bg-white">
+                        <option>I want to join the football sessions</option>
+                        <option>I want to volunteer as a mentor or trainer</option>
+                        <option>I am an institutional partner, health advocate, or donor</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="message" class="block text-xs font-bold uppercase tracking-wide text-myei-navy/60 mb-1">Message</label>
+                    <textarea id="message" name="message" rows="3" required class="w-full px-3 py-2 border border-myei-navy/15 rounded-lg focus:outline-none focus:border-myei-teal text-sm bg-white"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-myei-amber text-myei-navydeep font-semibold py-3 rounded-lg hover:bg-amber-400 transition shadow-sm text-sm uppercase tracking-wider">
+                    Send Message
+                </button>
+            </form>
+            <div id="form-success" style="display:none;" class="mt-4 p-4 bg-green-100 text-green-800 rounded-lg">
+                ✅ Thank you! Your message has been sent successfully.
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<script>
+function handleSubmit(event) {
+    event.preventDefault(); // Stop the form from redirecting
+    
+    const form = event.target;
+    const formData = new FormData(form);
+    
+    // Show loading state on button
+    const submitButton = form.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
+    submitButton.textContent = 'Sending...';
+    submitButton.disabled = true;
+    
+    // Send the form data via AJAX
+    fetch('/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: new URLSearchParams(formData).toString()
+    })
+    .then(response => {
+        if (response.ok) {
+            // Show success message
+            document.getElementById('form-success').style.display = 'block';
+            form.style.display = 'none';
+        } else {
+            throw new Error('Form submission failed');
+        }
+    })
+    .catch(error => {
+        alert('Sorry, there was an error sending your message. Please try again or email us directly.');
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+    });
+    
+    return false;
+}
+</script>
+
 
     <!-- ===== Footer ===== -->
     <footer class="bg-myei-navydeep border-t border-white/10 text-slate-400 text-xs">
